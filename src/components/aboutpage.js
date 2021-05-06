@@ -14,8 +14,6 @@ import partner1 from '../assets/img/partner1.png'
 import partner2 from '../assets/img/partner2.png'
 import partner3 from '../assets/img/partner3.png'
 import partner4 from '../assets/img/partner4.png'
-import ScriptTag from 'react-script-tag';
-
 
 function aboutpage() {
     return (
@@ -514,27 +512,6 @@ function aboutpage() {
                     </main>
                 </div>
             </div>
-            <div class="back-to-top">
-                <button href="#masthead" title="Go to Top" class="fa-angle-up"></button>
-            </div>
-               {/* <!-- jQuery library  --> */}
-    <ScriptTag src="assets/js/jquery.js" />
-
-{/* <!-- slick  jquery plguin --> */}
-<ScriptTag src="assets/js/slick.js" />
-
-{/* <!-- jquery.meanmenu for responsive menu --> */}
-<ScriptTag src="assets/js/jquery.meanmenu.js" />
-
-{/* <!--ResizeSensor for to support sticky sidebar--> */}
-<ScriptTag src="assets/js/ResizeSensor.js" />
-
-{/* <!--theia-sticky-sidebar for sticky sidebar--> */}
-<ScriptTag src="assets/js/theia-sticky-sidebar.js" />
-<ScriptTag src="assets/js/jquery.countdown.js" />
-
-{/* <!-- Custom script --> */}
-<ScriptTag src="assets/js/custom.js" />
         </>
     )
 }

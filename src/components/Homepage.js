@@ -28,14 +28,12 @@ import partner1 from '../assets/img/partner1.png'
 import partner2 from '../assets/img/partner2.png'
 import partner3 from '../assets/img/partner3.png'
 import partner4 from '../assets/img/partner4.png'
-import ScriptTag from 'react-script-tag';
-
 
 function Homepage() {
     return (
         <>
 
-            <section className="about-us-section" style={{background: "url(assets/img/about-bg2.png)"}}>
+            <section className="about-us-section" style={{ background: "url(assets/img/about-bg2.png)" }}>
                 <div className="container">
                     <div className="row">
                         <div className="custom-col-6">
@@ -72,7 +70,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="service-section" style={{background: "url(assets/img/service-bg.png)"}}>
+            <section className="service-section" style={{ background: "url(assets/img/service-bg.png)" }}>
                 <div className="container">
                     <header className="entry-header heading heading-center">
                         <h2 className="entry-title">
@@ -152,7 +150,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="reservation-section" style={{background: "url(assets/img/reservation-bg.jpg)"}}>
+            <section className="reservation-section" style={{ background: "url(assets/img/reservation-bg.jpg)" }}>
                 <div className="container">
                     <div className="reservation-content-wrapper">
                         <div className="reservation-content">
@@ -172,7 +170,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="testimonial-section" style={{background: "url(assets/img/about-bg.png)"}}>
+            <section className="testimonial-section" style={{ background: "url(assets/img/about-bg.png)" }}>
                 <div className="container">
                     <div className="testimonial-section-wrapper">
                         <div className="counter-section">
@@ -220,7 +218,7 @@ function Homepage() {
                         <div className="testimonial-content-wrapper">
                             <header className="entry-header heading">
                                 <h2 className="entry-title">
-                                    <span>testimonials </span> Our Customers Riview </h2>
+                                    <span>testimonials </span> Our Customers Review </h2>
                                 <p>A quisque, facilisis molestie a lacus quam elit. Nulla lacus conva lis.
                                 Vivamus nulla at in eros mi, magna malesuada ut sed
                                             facilisis, metus proin.</p>
@@ -291,7 +289,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="features-section" style={{background: "url(assets/img/service-bg.png)"}}>
+            <section className="features-section" style={{ background: "url(assets/img/service-bg.png)" }}>
                 <div className="container">
                     <header className="entry-header heading heading-center">
                         <h2 className="entry-title">
@@ -395,7 +393,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="team-section" style={{background: "url(assets/img/about-bg.png)"}}>
+            <section className="team-section" style={{ background: "url(assets/img/about-bg.png)" }}>
                 <div className="container">
                     <div className="team-section-wrapper">
                         <div className="team-content-wrapper">
@@ -551,7 +549,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="pricing-section" style={{background: "url(assets/img/about-bg.png)"}}>
+            <section className="pricing-section" style={{ background: "url(assets/img/about-bg.png)" }}>
                 <div className="container">
                     <header className="entry-header heading heading-center">
                         <h2 className="entry-title">
@@ -618,7 +616,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="products-section" style={{background: "url(assets/img/products-bg.jpg)"}}>
+            <section className="products-section" style={{ background: "url(assets/img/products-bg.jpg)" }}>
                 <div className="container">
                     <div className="products-content-wrapper">
                         <header className="entry-header heading">
@@ -747,7 +745,7 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="latest-post-section" style={{background: "url(assets/img/about-bg.png)"}}>
+            <section className="latest-post-section" style={{ background: "url(assets/img/about-bg.png)" }}>
                 <div className="container">
                     <header className="entry-header heading heading-center">
                         <h2 className="entry-title">
@@ -862,30 +860,6 @@ function Homepage() {
                     </div>
                 </div>
             </section>
-
-
-            <div className="back-to-top">
-                <button href="#masthead" title="Go to Top" className="fa-angle-up"></button>
-            </div>
-
-               {/* <!-- jQuery library  --> */}
-    <ScriptTag src="assets/js/jquery.js" />
-
-{/* <!-- slick  jquery plguin --> */}
-<ScriptTag src="assets/js/slick.js" />
-
-{/* <!-- jquery.meanmenu for responsive menu --> */}
-<ScriptTag src="assets/js/jquery.meanmenu.js" />
-
-{/* <!--ResizeSensor for to support sticky sidebar--> */}
-<ScriptTag src="assets/js/ResizeSensor.js" />
-
-{/* <!--theia-sticky-sidebar for sticky sidebar--> */}
-<ScriptTag src="assets/js/theia-sticky-sidebar.js" />
-<ScriptTag src="assets/js/jquery.countdown.js" />
-
-{/* <!-- Custom script --> */}
-<ScriptTag src="assets/js/custom.js" />
 
         </>
     )

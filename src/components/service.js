@@ -7,8 +7,6 @@ import team1 from '../assets/img/team1.jpg'
 import team2 from '../assets/img/team2.jpg'
 import team3 from '../assets/img/team3.jpg'
 import team4 from '../assets/img/team4.jpg'
-import ScriptTag from 'react-script-tag';
-
 
 function service() {
     return (
@@ -283,24 +281,6 @@ function service() {
                     </main>
                 </div>
             </div>
-               {/* <!-- jQuery library  --> */}
-    <ScriptTag src="assets/js/jquery.js" />
-
-{/* <!-- slick  jquery plguin --> */}
-<ScriptTag src="assets/js/slick.js" />
-
-{/* <!-- jquery.meanmenu for responsive menu --> */}
-<ScriptTag src="assets/js/jquery.meanmenu.js" />
-
-{/* <!--ResizeSensor for to support sticky sidebar--> */}
-<ScriptTag src="assets/js/ResizeSensor.js" />
-
-{/* <!--theia-sticky-sidebar for sticky sidebar--> */}
-<ScriptTag src="assets/js/theia-sticky-sidebar.js" />
-<ScriptTag src="assets/js/jquery.countdown.js" />
-
-{/* <!-- Custom script --> */}
-<ScriptTag src="assets/js/custom.js" />
         </>
     )
 }

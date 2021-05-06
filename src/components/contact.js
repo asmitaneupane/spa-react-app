@@ -1,6 +1,4 @@
 import React from 'react'
-import ScriptTag from 'react-script-tag';
-
 
 function contact() {
     return (
@@ -123,24 +121,6 @@ function contact() {
                     </main>
                 </div>
             </div>
-               {/* <!-- jQuery library  --> */}
-    <ScriptTag src="assets/js/jquery.js" />
-
-{/* <!-- slick  jquery plguin --> */}
-<ScriptTag src="assets/js/slick.js" />
-
-{/* <!-- jquery.meanmenu for responsive menu --> */}
-<ScriptTag src="assets/js/jquery.meanmenu.js" />
-
-{/* <!--ResizeSensor for to support sticky sidebar--> */}
-<ScriptTag src="assets/js/ResizeSensor.js" />
-
-{/* <!--theia-sticky-sidebar for sticky sidebar--> */}
-<ScriptTag src="assets/js/theia-sticky-sidebar.js" />
-<ScriptTag src="assets/js/jquery.countdown.js" />
-
-{/* <!-- Custom script --> */}
-<ScriptTag src="assets/js/custom.js" />
         </>
     )
 }

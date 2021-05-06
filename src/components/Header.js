@@ -1,7 +1,6 @@
 import React from 'react'
 import siteLogo from '../assets/img/site-logo.png'
 import sliderImg from '../assets/img/slider-img.jpg'
-import ScriptTag from 'react-script-tag';
 
 
 function Header() {
@@ -15,7 +14,7 @@ function Header() {
                     <section className="site-branding">
                         {/* <!-- site branding starting from here --> */}
                         <h1 className="site-title">
-                            <a href="index.html" title="site-logo" target="_self">
+                            <a href="/" title="site-logo" target="_self">
                                 <img src={siteLogo} alt="site-logo" />
                             </a>
                         </h1>
@@ -31,11 +30,11 @@ function Header() {
                                 <div className="menu-content-wrapper">
                                     <div className="menu-top-menu-container">
                                         <ul>
-                                            <li className="current-menu-item"><a href="index.html" target="_self">home</a>
+                                            <li className="current-menu-item"><a href="/" target="_self">home</a>
                                             </li>
-                                            <li><a href="about-page.html" target="_self">about us</a></li>
-                                            <li><a href="service.html" target="_self">service</a></li>
-                                            <li><a href="error-page.html" target="_self">error</a></li>
+                                            <li><a href="/aboutpage" target="_self">about us</a></li>
+                                            <li><a href="/service" target="_self">service</a></li>
+                                            <li><a href="/errorpage" target="_self">error</a></li>
                                             <li className="menu-item-has-children"><a href="#" target="_self">pages</a>
                                                 <ul>
                                                     <li><a href="#" target="_self">portfolio</a></li>
@@ -61,7 +60,7 @@ function Header() {
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html" target="_self">contact us</a></li>
+                                            <li><a href="/contact" target="_self">contact us</a></li>
                                         </ul>
                                     </div>
                                 </div>

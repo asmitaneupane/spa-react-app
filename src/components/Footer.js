@@ -1,8 +1,7 @@
 import React from 'react'
 import siteLogo from '../assets/img/site-logo.png'
-import ScriptTag from 'react-script-tag';
-import { TiSocialYoutubeCircular } from 'react-icons/ti'
-import { AiOutlineFacebook, AiOutlineTwitter } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
+import '../App.css'
 
 function Footer() {
     return (
@@ -57,12 +56,8 @@ function Footer() {
                                     <input name="EMAIL" placeholder="exmaple@gmail.com" required="" type="email" />
                                 </p>
                                 <p>
-                                    <input defaultValue="SUBSCRIBE" type="submit" />
+                                    <input value="SUBSCRIBE" type="submit" />
                                 </p>
-                                <label>Leave this field empty if you're
-                                human:
-                                    <input name="_mc4wp_honeypot" defaultValue="" tabIndex="-1" autoComplete="off" type="text" />
-                                </label>
                                 <input name="_mc4wp_timestamp" defaultValue="1507111963" type="hidden" />
                                 <input name="_mc4wp_form_id" defaultValue="1732" type="hidden" />
                                 <input name="_mc4wp_form_element_id" defaultValue="mc4wp-form-1" type="hidden" />
@@ -75,45 +70,38 @@ function Footer() {
             {/* <!-- widget area ends here --> */}
             <div className="site-generator">
                 <div className="container">
-                    <div className="inline-social-icons social-links">
+
+
+
+                    <div className="inline-social-icons social-links ">
                         <ul>
                             <li>
-                            <AiOutlineFacebook/><a href="https://facebook.com" title="facebook" target="blank">facebook</a>
+                                <Link to="https://facebook.com" title="facebook" target="blank">
+                                   facebook
+                                </Link>
                             </li>
                             <li>
-                                <AiOutlineTwitter/><a href="https://twitter.com" title="twitter" target="blank">twitter</a>
+                                <Link to="https://twitter.com" title="twitter" target="blank">
+                                    twitter
+                                </Link>
                             </li>
                             <li>
-                                <TiSocialYoutubeCircular/><a href="https://youtube.com" title="youtube" target="blank">youtube</a>
+                                <Link to="https://youtube.com" title="youtube" target="blank">
+                                   youtube
+                                </Link>
                             </li>
 
                         </ul>
                     </div>
-                    <span className="copy-right">© 2018
-                        <a href="#">Theme Company</a> All Rights Reserved
+                    <span className="copy-right">© 2018 &nbsp;
+                        <a href="#">Theme Company</a> All Rights Reserved &nbsp;
                         <a href="#">Privacy Policy
                         </a>
                     </span>
                 </div>
-
-                {/* <!-- jQuery library  --> */}
-                <ScriptTag src="assets/js/jquery.js" />
-
-                {/* <!-- slick  jquery plguin --> */}
-                <ScriptTag src="assets/js/slick.js" />
-
-                {/* <!-- jquery.meanmenu for responsive menu --> */}
-                <ScriptTag src="assets/js/jquery.meanmenu.js" />
-
-                {/* <!--ResizeSensor for to support sticky sidebar--> */}
-                <ScriptTag src="assets/js/ResizeSensor.js" />
-
-                {/* <!--theia-sticky-sidebar for sticky sidebar--> */}
-                <ScriptTag src="assets/js/theia-sticky-sidebar.js" />
-                <ScriptTag src="assets/js/jquery.countdown.js" />
-
-                {/* <!-- Custom script --> */}
-                <ScriptTag src="assets/js/custom.js" />
+                <div className="back-to-top">
+                <button href="#masthead" title="Go to Top" className="fa-angle-up"></button>
+            </div>
 
             </div>
         </footer>
