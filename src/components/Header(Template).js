@@ -6,8 +6,8 @@ import sliderImg from '../assets/img/slider-img.jpg'
 function Header() {
     return (
         
-        <div id="page" class="hfeed site">
-        <header id="masthead" className="site-header" style="background: url(assets/img/slider-bg.jpg)">
+        <div id="page" className="hfeed site">
+        <header id="masthead" className="site-header" style={{background: "url(assets/img/slider-bg.jpg)"}}>
             {/* <!-- header starting from here --> */}
 
             <div className="hgroup-wrap">
@@ -111,20 +111,20 @@ function Header() {
                     </div>
                 </div>
                 </div>
-                <div class="page-title-wrap" style="background-image:url(assets/img/single-page.jpg);">
-                <div class="container">
-                    <h2 class="page-title">
+                <div className="page-title-wrap" style={{background:"url(assets/img/single-page.jpg)"}}>
+                <div className="container">
+                    <h2 className="page-title">
                         
                     </h2>
-                    <div class="breadcrumb-trail breadcrumbs">
-                        <ul class="trail-items">
-                            <li class="trail-item trail-begin">
+                    <div className="breadcrumb-trail breadcrumbs">
+                        <ul className="trail-items">
+                            <li className="trail-item trail-begin">
                                 <a href="#" rel="home">
                                     <span itemprop="name">Home</span>
                                 </a>
                                 <meta />
                             </li>
-                            <li class="trail-item trail-end">
+                            <li className="trail-item trail-end">
                                 <span itemprop="name">about</span>
                                 <meta />
                             </li>

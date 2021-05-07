@@ -6,7 +6,6 @@ import './assets/css/responsive.css'
 import './assets/css/slick.css'
 import './assets/css/slick-theme.css'
 import './assets/css/meanmenu.css'
-import Header from './components/Header'
 import Footer from './components/Footer'
 import Homepage from './components/Homepage'
 import { 
@@ -23,12 +22,10 @@ function App() {
       <Router>
         <div>
         <Route exact path="/" component={Homepage} />
-        <div><Header></Header>
         <Route path="/aboutpage" component={aboutpage} />
         <Route path="/contact" component={contact} />
-        <Route path="/errorpage" component={errorpage} />
         <Route path="/service" component={service} />
-        </div>
+        <Route path="/errorpage" component={errorpage} />
         <Footer></Footer></div>
       </Router>
   )
