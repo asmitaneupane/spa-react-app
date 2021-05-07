@@ -7,7 +7,7 @@ function contact() {
                 <div id="primary" class="content-area">
                     {/* <!-- primary-home starting from here --> */}
                     <main id="main" class="site-main">
-                        <div class="contact-section" style={{background: "url(assets/img/about-bg2.png)"}}>
+                        <div class="contact-section" style={{ background: "url(assets/img/about-bg2.png)" }}>
                             <div class="container">
                                 <header class="entry-header heading">
                                     <h2 class="entry-title">

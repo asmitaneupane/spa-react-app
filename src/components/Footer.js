@@ -12,8 +12,8 @@ function Footer() {
                 <div className="container">
                     <aside className="widget">
                         <div className="textwidget">
-                            <a href="#" className="footer-branding">
-                                <img src={siteLogo} alt="site-logo" />
+                            <a className="footer-branding">
+                                <img src={siteLogo} />
                             </a>
                         </div>
                     </aside>
@@ -77,7 +77,7 @@ function Footer() {
                         <ul>
                             <li>
                                 <Link to="https://facebook.com" title="facebook" target="blank">
-                                   facebook
+                                    facebook
                                 </Link>
                             </li>
                             <li>
@@ -87,21 +87,21 @@ function Footer() {
                             </li>
                             <li>
                                 <Link to="https://youtube.com" title="youtube" target="blank">
-                                   youtube
+                                    youtube
                                 </Link>
                             </li>
 
                         </ul>
                     </div>
                     <span className="copy-right">© 2018 &nbsp;
-                        <a href="#">Theme Company</a> All Rights Reserved &nbsp;
-                        <a href="#">Privacy Policy
+                        <a >Theme Company</a> All Rights Reserved &nbsp;
+                        <a >Privacy Policy
                         </a>
                     </span>
                 </div>
                 <div className="back-to-top">
-                <button href="#masthead" title="Go to Top" className="fa-angle-up"></button>
-            </div>
+                    <button href="#masthead" title="Go to Top" className="fa-angle-up"></button>
+                </div>
 
             </div>
         </footer>

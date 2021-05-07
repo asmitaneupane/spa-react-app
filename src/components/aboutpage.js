@@ -212,7 +212,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">founder</h6>
-                                                    <h3 class="author-name"><a href="#">danish Doe</a> </h3>
+                                                    <h3 class="author-name"><a >danish Doe</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -245,7 +245,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">accountant</h6>
-                                                    <h3 class="author-name"><a href="#">roseline sam</a> </h3>
+                                                    <h3 class="author-name"><a >roseline sam</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -278,7 +278,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">manager</h6>
-                                                    <h3 class="author-name"><a href="#">jonathon lane</a> </h3>
+                                                    <h3 class="author-name"><a >jonathon lane</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -311,7 +311,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">owner</h6>
-                                                    <h3 class="author-name"><a href="#">christina james</a> </h3>
+                                                    <h3 class="author-name"><a >christina james</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -344,7 +344,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">owner</h6>
-                                                    <h3 class="author-name"><a href="#">christina james</a> </h3>
+                                                    <h3 class="author-name"><a >christina james</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -377,7 +377,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">manager</h6>
-                                                    <h3 class="author-name"><a href="#">jonathon lane</a> </h3>
+                                                    <h3 class="author-name"><a >jonathon lane</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -410,7 +410,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">accountant</h6>
-                                                    <h3 class="author-name"><a href="#">roseline sam</a> </h3>
+                                                    <h3 class="author-name"><a >roseline sam</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -443,7 +443,7 @@ function aboutpage() {
                                             <div class="team-content">
                                                 <div class="team-content-info">
                                                     <h6 class="author-designation">founder</h6>
-                                                    <h3 class="author-name"><a href="#">danish Doe</a> </h3>
+                                                    <h3 class="author-name"><a >danish Doe</a> </h3>
                                                 </div>
                                                 <div class="inline-social-icons social-links">
                                                     <ul>
@@ -481,27 +481,27 @@ function aboutpage() {
 
                                     <div class="partner-slider">
                                         <div class="partner-item">
-                                            <a href="#">
+                                            <a >
                                                 <img src={partner1} alt="partner1" />
                                             </a>
                                         </div>
                                         <div class="partner-item">
-                                            <a href="#">
+                                            <a >
                                                 <img src={partner2} alt="partner2" />
                                             </a>
                                         </div>
                                         <div class="partner-item">
-                                            <a href="#">
+                                            <a >
                                                 <img src={partner3} alt="partner3" />
                                             </a>
                                         </div>
                                         <div class="partner-item">
-                                            <a href="#">
+                                            <a >
                                                 <img src={partner4} alt="partner4" />
                                             </a>
                                         </div>
                                         <div class="partner-item">
-                                            <a href="#">
+                                            <a >
                                                 <img src={partner3} alt="partner3" />
                                             </a>
                                         </div>

@@ -1,4 +1,6 @@
 import React from 'react'
+import "../App.css"
+import '../assets/css/slick-theme.css'
 import about1 from '../assets/img/about1.jpg';
 import about2 from '../assets/img/about2.jpg';
 import headingImage from '../assets/img/heading-image.png';
@@ -28,22 +30,150 @@ import partner1 from '../assets/img/partner1.png'
 import partner2 from '../assets/img/partner2.png'
 import partner3 from '../assets/img/partner3.png'
 import partner4 from '../assets/img/partner4.png'
+import siteLogo from '../assets/img/site-logo.png'
+import sliderImg from '../assets/img/slider-img.jpg'
 
 function Homepage() {
     return (
         <>
+<div className="home">
+<div id="page" class="hfeed site">
+        <header id="masthead" className="site-header">
+            {/* <!-- header starting from here --> */}
 
+            <div className="hgroup-wrap">
+                <div className="container">
+                    <section className="site-branding">
+                        {/* <!-- site branding starting from here --> */}
+                        <h1 className="site-title">
+                            <a href="/" title="site-logo" target="_self">
+                                <img src={siteLogo} />
+                            </a>
+                        </h1>
+                        {/* <!-- <span className="site-description">satisfied home</span> --> */}
+                    </section>
+                    {/* <!-- site branding ends here --> */}
+
+
+                    <div className="hgroup-right">
+                        <div id="navbar" className="navbar">
+                            {/* <!-- navbar starting from here --> */}
+                            <nav id="site-navigation" className="navigation main-navigation">
+                                <div className="menu-content-wrapper">
+                                    <div className="menu-top-menu-container">
+                                        <ul>
+                                            <li className="current-menu-item">
+                                                <a href="/" target="_self">home</a>
+                                            </li>
+                                            <li><a href="/aboutpage" target="_self">about us</a></li>
+                                            <li><a href="/service" target="_self">service</a></li>
+                                            <li><a href="/errorpage" target="_self">error</a></li>
+                                            <li className="menu-item-has-children"><a target="_self">pages</a>
+                                                <ul>
+                                                    <li><a target="_self">portfolio</a></li>
+                                                    <li><a target="_self">portfolio
+                                                            detail</a>
+                                                    </li>
+                                                    <li><a target="_self">service detail</a>
+                                                    </li>
+                                                    <li><a target="_self">error page</a></li>
+                                                    <li>
+                                                        <a target="_self">listing version</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a target="_self">listing 1</a>
+                                                            </li>
+                                                            <li>
+                                                                <a target="_self">listing 2</a>
+                                                            </li>
+                                                            <li>
+                                                                <a target="_self">listing 3</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/contact" target="_self">contact us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                            {/* <!-- #site-navigation --> */}
+                        </div>
+                        {/* <!-- navbar ends here --> */}
+                        <div id="left-search" className="header-search-section">
+                            <div className="search-toggle">
+                                <i className="fa"></i>
+                            </div>
+                        </div>
+                        <div className="site-cart-views">
+                            <div className="site-cart-info">
+                                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span className="cart-quantity">2</span>
+                            </div>
+                            <div className="widget widget_shopping_cart">
+                                <div className="mini_cart_inner">
+                                    <div className="widget woocommerce widget_shopping_cart">
+                                        <div className="widget_shopping_cart_content">
+                                            <p className="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="search-section">
+                            {/* <!-- search section starting from here --> */}
+                            <div className="search-container">
+                                <div className="close-icon">
+                                    <i className="fa fa-times"></i>
+                                </div>
+                                <form role="search" method="get" className="search-form" action="">
+                                    <label>
+                                        <span className="screen-reader-text">Search for:</span>
+                                        <input className="search-field" placeholder="Search …" defaultValue="" name="s"
+                                            type="search" />
+                                        <span className="search-input-line"></span>
+                                    </label>
+                                    <input className="search-submit" defaultValue="Search" type="submit" />
+                                </form>
+                                <h5>Type to search</h5>
+                            </div>
+                        </div>
+                        {/* <!-- search section ends here --> */}
+                    </div>
+                </div>
+                <div className="mouse-scroll">
+                    <a href="#content">scroll</a>
+                </div>
+            </div>
+            <section className="featured-slider ">
+                <div className="banner-slider">
+                    <div className="slider-item">
+                        <figure className="slider-image">
+                            <img src={sliderImg} />
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </header> 
+        {/* <!-- header ends here --> */}
+
+<div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                {/* <!-- primary-home starting from here --> */}
+                <main id="main" class="site-main">
             <section className="about-us-section" style={{ background: "url(assets/img/about-bg2.png)" }}>
                 <div className="container">
                     <div className="row">
                         <div className="custom-col-6">
                             <div className="about-us-image-wrapper image-wrapper-has-two-image">
                                 <figure className="first-image">
-                                    <img src={about1} alt="about1" className="" />
+                                    <img src={about1} />
 
                                 </figure>
                                 <figure className="second-image">
-                                    <img src={about2} alt="about2" className="" />
+                                    <img src={about2} />
                                 </figure>
                             </div>
                         </div>
@@ -64,7 +194,7 @@ function Homepage() {
                                             ut sed facilisis, metus proin.</p>
                                 <p>Diam pharetra sociis quis per ad metus, pharetra libero, ac quis congue orci,
                                             quam inceptos pede enim est vitae tortor.</p>
-                                <a href="#" className="box-button"> about us</a>
+                                <a className="box-button"> about us</a>
                             </div>
                         </div>
                     </div>
@@ -83,67 +213,67 @@ function Homepage() {
                         ducimus sed pellentesque, turpis magni aliquam
                                     consectetuer erat</p>
                         <figure className="featured-image">
-                            <img src={headingImage} alt="heading-image" className="" />
+                            <img src={headingImage} />
                         </figure>
                     </header>
                     <div className="post-wrapper post-wrapper-has-two-child">
                         <article className="post">
                             <figure className="featuerd-image">
-                                <img src={service1} alt="service1" className="" />
+                                <img src={service1} />
                             </figure>
                             <div className="post-content">
                                 <header className="entry-header">
                                     <h3 className="entry-title">
-                                        <a href="#">hair salon</a>
+                                        <a >hair salon</a>
                                     </h3>
                                 </header>
                                 <div className="entry-content">
-                                    <a href="#" className="box-button"> read more</a>
+                                    <a className="box-button"> read more</a>
                                 </div>
                             </div>
                         </article>
                         <article className="post">
                             <figure className="featuerd-image">
-                                <img src={service2} alt="service2" className="" />
+                                <img src={service2} />
                             </figure>
                             <div className="post-content">
                                 <header className="entry-header">
                                     <h3 className="entry-title">
-                                        <a href="#">welless spa</a>
+                                        <a >welless spa</a>
                                     </h3>
                                 </header>
                                 <div className="entry-content">
-                                    <a href="#" className="box-button"> read more</a>
+                                    <a className="box-button"> read more</a>
                                 </div>
                             </div>
                         </article>
                         <article className="post">
                             <figure className="featuerd-image">
-                                <img src={service3} alt="service3" className="" />
+                                <img src={service3} />
                             </figure>
                             <div className="post-content">
                                 <header className="entry-header">
                                     <h3 className="entry-title">
-                                        <a href="#">physio therapy</a>
+                                        <a >physio therapy</a>
                                     </h3>
                                 </header>
                                 <div className="entry-content">
-                                    <a href="#" className="box-button"> read more</a>
+                                    <a className="box-button"> read more</a>
                                 </div>
                             </div>
                         </article>
                         <article className="post">
                             <figure className="featuerd-image">
-                                <img src={service4} alt="service4" className="" />
+                                <img src={service4} />
                             </figure>
                             <div className="post-content">
                                 <header className="entry-header">
                                     <h3 className="entry-title">
-                                        <a href="#">nail studio</a>
+                                        <a >nail studio</a>
                                     </h3>
                                 </header>
                                 <div className="entry-content">
-                                    <a href="#" className="box-button"> read more</a>
+                                    <a className="box-button"> read more</a>
                                 </div>
                             </div>
                         </article>
@@ -162,10 +292,10 @@ function Homepage() {
                             </header>
                             <p>Diam pharetra sociis quis per ad metus, pharetra libero, ac quis congue orci,
                                         quam inceptos pede enim est vitae tortor.</p>
-                            <a href="#" className="box-button">book now</a>
+                            <a className="box-button">book now</a>
                         </div>
                         <figure className="featured-image">
-                            <img src={reservation1} alt="reservation1" className="" />
+                            <img src={reservation1} />
                         </figure>
                     </div>
                 </div>
@@ -177,7 +307,7 @@ function Homepage() {
                             <div className="counter-item-wrapper">
                                 <div className="counter-item">
                                     <figure className="counter-icon">
-                                        <img src={counterIcon1} alt="counter-icon1" className="" />
+                                        <img src={counterIcon1} />
                                     </figure>
                                     <div className="count-detail">
                                         <span className="counter-value" data-count="640">0</span>
@@ -186,7 +316,7 @@ function Homepage() {
                                 </div>
                                 <div className="counter-item">
                                     <figure className="counter-icon">
-                                        <img src={counterIcon2} alt="counter-icon2" className="" />
+                                        <img src={counterIcon2} />
                                     </figure>
                                     <div className="count-detail">
                                         <span className="counter-value" data-count="7">0</span>
@@ -197,7 +327,7 @@ function Homepage() {
                             <div className="counter-item-wrapper">
                                 <div className="counter-item">
                                     <figure className="counter-icon">
-                                        <img src={counterIcon3} alt="counter-icon3" className="" />
+                                        <img src={counterIcon3} />
                                     </figure>
                                     <div className="count-detail">
                                         <span className="counter-value" data-count="35">0</span>
@@ -206,7 +336,7 @@ function Homepage() {
                                 </div>
                                 <div className="counter-item">
                                     <figure className="counter-icon">
-                                        <img src={counterIcon4} alt="counter-icon4" className="" />
+                                        <img src={counterIcon4} />
                                     </figure>
                                     <div className="count-detail">
                                         <span className="counter-value" data-count="335">0</span>
@@ -246,7 +376,7 @@ function Homepage() {
                                     </div>
                                     <div className="author-info-wrapper">
                                         <figure className="author-image">
-                                            <img src={testi1} alt="testi1" className="" />
+                                            <img src={testi1} />
                                         </figure>
                                         <div className="author-info">
                                             <h3 className="author-name">katherine shea</h3>
@@ -306,7 +436,7 @@ function Homepage() {
                                 <div className="post-content">
                                     <header className="entry-header">
                                         <h3 className="entry-title">
-                                            <a href="#">Friendly enviroment</a>
+                                            <a >Friendly enviroment</a>
                                         </h3>
                                     </header>
                                     <div className="entry-content">
@@ -321,7 +451,7 @@ function Homepage() {
                                 <div className="post-content">
                                     <header className="entry-header">
                                         <h3 className="entry-title">
-                                            <a href="#">Best specialties</a>
+                                            <a >Best specialties</a>
                                         </h3>
                                     </header>
                                     <div className="entry-content">
@@ -337,7 +467,7 @@ function Homepage() {
                                 <div className="post-content">
                                     <header className="entry-header">
                                         <h3 className="entry-title">
-                                            <a href="#">reasonable price</a>
+                                            <a >reasonable price</a>
                                         </h3>
                                     </header>
                                     <div className="entry-content">
@@ -353,7 +483,7 @@ function Homepage() {
                                 <div className="post-content">
                                     <header className="entry-header">
                                         <h3 className="entry-title">
-                                            <a href="#">quality service</a>
+                                            <a >quality service</a>
                                         </h3>
                                     </header>
                                     <div className="entry-content">
@@ -366,7 +496,7 @@ function Homepage() {
                             </article>
                         </div>
                         <figure className="featured-image">
-                            <img src={featuresImg} alt="features-img" className="" />
+                            <img src={featuresImg} />
                         </figure>
                     </div>
                 </div>
@@ -376,7 +506,7 @@ function Homepage() {
                     <div className="discount-section">
                         <div className="discount-image">
                             <figure>
-                                <img src={discountImg} alt="discount-img" className="" />
+                                <img src={discountImg} />
                             </figure>
                         </div>
                         <div className="discount-content">
@@ -386,7 +516,7 @@ function Homepage() {
                             nulla at in eros mi, magna malesuada ut
                                         sed facilisis, metus proin.</p>
                             <div className="discount-btn-wrapper">
-                                <a href="#" className="box-button">book now</a>
+                                <a className="box-button">book now</a>
                                 <span>gift card</span>
                             </div>
                         </div>
@@ -410,19 +540,19 @@ function Homepage() {
                                         enim est vitae tortor.</p>
                             <p>Diam pharetra sociis quis per ad metus, pharetra libero, ac quis congue orci,
                                         quam inceptos pede enim est vitae tortor.</p>
-                            <a href="#" className="box-button">View All Team Members</a>
+                            <a className="box-button">View All Team Members</a>
                         </div>
                         <div className="team-item-wrapper">
                             <div className="team-item">
                                 <div className="team-image-wrapper">
                                     <figure className="featured-image">
-                                        <img src={team1} alt="team1" className="" />
+                                        <img src={team1} />
                                     </figure>
                                 </div>
                                 <div className="team-content">
                                     <div className="team-content-info">
                                         <h6 className="author-designation">founder</h6>
-                                        <h3 className="author-name"><a href="#">danish Doe</a> </h3>
+                                        <h3 className="author-name"><a >danish Doe</a> </h3>
                                     </div>
                                     <div className="inline-social-icons social-links">
                                         <ul>
@@ -449,13 +579,13 @@ function Homepage() {
                             <div className="team-item">
                                 <div className="team-image-wrapper">
                                     <figure className="featured-image">
-                                        <img src={team3} alt="team3" className="" />
+                                        <img src={team3} />
                                     </figure>
                                 </div>
                                 <div className="team-content">
                                     <div className="team-content-info">
                                         <h6 className="author-designation">accountant</h6>
-                                        <h3 className="author-name"><a href="#">roseline sam</a> </h3>
+                                        <h3 className="author-name"><a >roseline sam</a> </h3>
                                     </div>
                                     <div className="inline-social-icons social-links">
                                         <ul>
@@ -482,13 +612,13 @@ function Homepage() {
                             <div className="team-item">
                                 <div className="team-image-wrapper">
                                     <figure className="featured-image">
-                                        <img src={team4} alt="team4" className="" />
+                                        <img src={team4} />
                                     </figure>
                                 </div>
                                 <div className="team-content">
                                     <div className="team-content-info">
                                         <h6 className="author-designation">manager</h6>
-                                        <h3 className="author-name"><a href="#">jonathon lane</a> </h3>
+                                        <h3 className="author-name"><a >jonathon lane</a> </h3>
                                     </div>
                                     <div className="inline-social-icons social-links">
                                         <ul>
@@ -515,13 +645,13 @@ function Homepage() {
                             <div className="team-item">
                                 <div className="team-image-wrapper">
                                     <figure className="featured-image">
-                                        <img src={team2} alt="team2" className="" />
+                                        <img src={team2} />
                                     </figure>
                                 </div>
                                 <div className="team-content">
                                     <div className="team-content-info">
                                         <h6 className="author-designation">owner</h6>
-                                        <h3 className="author-name"><a href="#">christina james</a> </h3>
+                                        <h3 className="author-name"><a >christina james</a> </h3>
                                     </div>
                                     <div className="inline-social-icons social-links">
                                         <ul>
@@ -559,7 +689,7 @@ function Homepage() {
                         aliquam, diam amet, integer erat morbi tristique mauris pede, in rutrum suspendisse
                                     vel integer in etiam.</p>
                         <figure className="featured-image">
-                            <img src={headingImage} alt="heading-image" className="" />
+                            <img src={headingImage} />
                         </figure>
                     </header>
                     <div className="pricing-column-wrapper">
@@ -568,7 +698,7 @@ function Homepage() {
                                 <h3 className="pricing-title">Wellness Spa</h3>
                                 <span className="price-number">$15.55 </span>
                                 <figure className="featured-image">
-                                    <img src={pricingImage} alt="pricing-image" className="" />
+                                    <img src={pricingImage} />
                                 </figure>
                             </div>
                             <div className="price-table-content">
@@ -577,7 +707,7 @@ function Homepage() {
                                                 lis.</p>
                                 </div>
                             </div>
-                            <a className="box-button" href="#"> book now </a>
+                            <a className="box-button" > book now </a>
                         </div>
                         <div className="price-column ">
                             <div className="price-header">
@@ -585,7 +715,7 @@ function Homepage() {
                                 <h3 className="pricing-title">hair salon</h3>
                                 <span className="price-number">$4.2 </span>
                                 <figure className="featured-image">
-                                    <img src={pricingImage} alt="pricing-image" className="" />
+                                    <img src={pricingImage} />
                                 </figure>
                             </div>
                             <div className="price-table-content">
@@ -594,14 +724,14 @@ function Homepage() {
                                                 lis.</p>
                                 </div>
                             </div>
-                            <a className="box-button" href="#"> book now </a>
+                            <a className="box-button" > book now </a>
                         </div>
                         <div className="price-column ">
                             <div className="price-header">
                                 <h3 className="pricing-title">physio therapy</h3>
                                 <span className="price-number">$22.4 </span>
                                 <figure className="featured-image">
-                                    <img src={pricingImage} alt="pricing-image" className="" />
+                                    <img src={pricingImage} />
                                 </figure>
                             </div>
                             <div className="price-table-content">
@@ -611,7 +741,7 @@ function Homepage() {
                                             </p>
                                 </div>
                             </div>
-                            <a className="box-button" href="#"> book now </a>
+                            <a className="box-button" > book now </a>
                         </div>
                     </div>
                 </div>
@@ -625,15 +755,15 @@ function Homepage() {
                             <p>A quisque, facilisis molestie a lacus quam elit. Nulla lacus conva lis. Vivamus
                             nulla at in eros mi, magna malesuada ut sed
                                         facilisis, metus proin.</p>
-                            <a href="#" className="box-button">view all products</a>
+                            <a className="box-button">view all products</a>
                         </header>
                         <div className="product-slider">
                             <div className="element-item">
                                 <div className="product-list-wrapper">
                                     <div className="image-icon-wrapper">
                                         <figure className="featured-image">
-                                            <a href="#">
-                                                <img src={product1} alt="product1" className="" />
+                                            <a >
+                                                <img src={product1} />
                                             </a>
                                         </figure>
                                     </div>
@@ -646,14 +776,14 @@ function Homepage() {
                                             </ins>
                                         </span>
                                         <header className="entry-header">
-                                            <a href="#">
+                                            <a >
                                                 <h3 className="entry-title">Rose Stem Repair
                                                 Precious Oil
                                                         </h3>
                                             </a>
                                         </header>
 
-                                        <a href="#" className="box-button">add to cart</a>
+                                        <a className="box-button">add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -661,8 +791,8 @@ function Homepage() {
                                 <div className="product-list-wrapper">
                                     <div className="image-icon-wrapper">
                                         <figure className="featured-image">
-                                            <a href="#">
-                                                <img src={product2} alt="product2" className="" />
+                                            <a >
+                                                <img src={product2} />
                                             </a>
                                         </figure>
                                     </div>
@@ -675,13 +805,13 @@ function Homepage() {
                                             </ins>
                                         </span>
                                         <header className="entry-header">
-                                            <a href="#">
+                                            <a >
                                                 <h3 className="entry-title">Skin Care Rhubrb Nature Hyaluronic Serum
                                                         </h3>
                                             </a>
                                         </header>
 
-                                        <a href="#" className="box-button">add to cart</a>
+                                        <a className="box-button">add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -689,8 +819,8 @@ function Homepage() {
                                 <div className="product-list-wrapper">
                                     <div className="image-icon-wrapper">
                                         <figure className="featured-image">
-                                            <a href="#">
-                                                <img src={product1} alt="product1" className="" />
+                                            <a >
+                                                <img src={product1} />
                                             </a>
                                         </figure>
                                     </div>
@@ -703,13 +833,13 @@ function Homepage() {
                                             </ins>
                                         </span>
                                         <header className="entry-header">
-                                            <a href="#">
+                                            <a >
                                                 <h3 className="entry-title">Rose Stem Repair Precious Oil
                                                         </h3>
                                             </a>
                                         </header>
 
-                                        <a href="#" className="box-button">add to cart</a>
+                                        <a className="box-button">add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -717,8 +847,8 @@ function Homepage() {
                                 <div className="product-list-wrapper">
                                     <div className="image-icon-wrapper">
                                         <figure className="featured-image">
-                                            <a href="#">
-                                                <img src={product2} alt="product2" className="" />
+                                            <a >
+                                                <img src={product2} />
                                             </a>
                                         </figure>
                                     </div>
@@ -731,13 +861,13 @@ function Homepage() {
                                             </ins>
                                         </span>
                                         <header className="entry-header">
-                                            <a href="#">
+                                            <a >
                                                 <h3 className="entry-title">Skin Care Rhubrb Nature Hyaluronic Serum
                                                         </h3>
                                             </a>
                                         </header>
 
-                                        <a href="#" className="box-button">add to cart</a>
+                                        <a className="box-button">add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -758,64 +888,64 @@ function Homepage() {
                     <div className="post-wrapper post-wrapper-has-three-child">
                         <article className="post">
                             <figure className="featuerd-image">
-                                <img src={lpost1} alt="lpost1" className="" />
+                                <img src={lpost1} />
                             </figure>
                             <div className="post-content">
                                 <header className="entry-header">
                                     <div className="entry-meta">
                                         <span className="cat-links">
-                                            <a href="#">massage</a>
-                                            <a href="#">oil</a>
+                                            <a >massage</a>
+                                            <a >oil</a>
                                         </span>
                                     </div>
                                     <h3 className="entry-title">
-                                        <a href="#">Orci porttitor vivamus enim natus ut non</a>
+                                        <a >Orci porttitor vivamus enim natus ut non</a>
                                     </h3>
                                 </header>
                                 <div className="entry-content">
-                                    <a href="#" className="box-button"> read more</a>
+                                    <a className="box-button"> read more</a>
                                 </div>
                             </div>
                         </article>
                         <article className="post">
                             <figure className="featuerd-image">
-                                <img src={lpost2} alt="lpost2" className="" />
+                                <img src={lpost2} />
                             </figure>
                             <div className="post-content">
                                 <header className="entry-header">
                                     <div className="entry-meta">
                                         <span className="cat-links">
-                                            <a href="#">massage</a>
-                                            <a href="#">oil</a>
+                                            <a >massage</a>
+                                            <a >oil</a>
                                         </span>
                                     </div>
                                     <h3 className="entry-title">
-                                        <a href="#">Orci porttitor vivamus enim natus ut non</a>
+                                        <a >Orci porttitor vivamus enim natus ut non</a>
                                     </h3>
                                 </header>
                                 <div className="entry-content">
-                                    <a href="#" className="box-button"> read more</a>
+                                    <a className="box-button"> read more</a>
                                 </div>
                             </div>
                         </article>
                         <article className="post">
                             <figure className="featuerd-image">
-                                <img src={lpost3} alt="lpost3" className="" />
+                                <img src={lpost3} />
                             </figure>
                             <div className="post-content">
                                 <header className="entry-header">
                                     <div className="entry-meta">
                                         <span className="cat-links">
-                                            <a href="#">massage</a>
-                                            <a href="#">oil</a>
+                                            <a >massage</a>
+                                            <a >oil</a>
                                         </span>
                                     </div>
                                     <h3 className="entry-title">
-                                        <a href="#">Orci porttitor vivamus enim natus ut non</a>
+                                        <a >Orci porttitor vivamus enim natus ut non</a>
                                     </h3>
                                 </header>
                                 <div className="entry-content">
-                                    <a href="#" className="box-button"> read more</a>
+                                    <a className="box-button"> read more</a>
                                 </div>
                             </div>
                         </article>
@@ -832,35 +962,39 @@ function Homepage() {
 
                         <div className="partner-slider">
                             <div className="partner-item">
-                                <a href="#">
-                                    <img src={partner1} alt="partner1" className="" />
+                                <a >
+                                    <img src={partner1} />
                                 </a>
                             </div>
                             <div className="partner-item">
-                                <a href="#">
-                                    <img src={partner2} alt="partner2" className="" />
+                                <a >
+                                    <img src={partner2} />
                                 </a>
                             </div>
                             <div className="partner-item">
-                                <a href="#">
-                                    <img src={partner3} alt="partner3" className="" />
+                                <a >
+                                    <img src={partner3} />
                                 </a>
                             </div>
                             <div className="partner-item">
-                                <a href="#">
-                                    <img src={partner4} alt="partner4" className="" />
+                                <a >
+                                    <img src={partner4} />
                                 </a>
                             </div>
                             <div className="partner-item">
-                                <a href="#">
-                                    <img src={partner3} alt="partner3" className="" />
+                                <a >
+                                    <img src={partner3} />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
+            </main>
+            </div>
+</div>
+</div>
+</div>
         </>
     )
 }

@@ -21,13 +21,15 @@ import service from './components/service'
 function App() {
   return (
       <Router>
-        <div><Header></Header></div>
+        <div>
         <Route exact path="/" component={Homepage} />
+        <div><Header></Header>
         <Route path="/aboutpage" component={aboutpage} />
         <Route path="/contact" component={contact} />
         <Route path="/errorpage" component={errorpage} />
         <Route path="/service" component={service} />
-        <div><Footer></Footer></div>
+        </div>
+        <Footer></Footer></div>
       </Router>
   )
 }

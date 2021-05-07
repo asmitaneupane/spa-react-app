@@ -9,7 +9,7 @@ function errorpage() {
                 <div id="primary" class="content-area">
                     {/* <!-- primary-home starting from here --> */}
                     <main id="main" class="site-main">
-                        <div class="error-404 not-found" style={{background: "url(assets/img/error-bg.jpg)"}}>
+                        <div class="error-404 not-found" style={{ background: "url(assets/img/error-bg.jpg)" }}>
                             <div class="container">
                                 <div class="entry-content">
                                     <h2 class="page-title">404</h2>

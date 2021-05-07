@@ -5,8 +5,9 @@ import sliderImg from '../assets/img/slider-img.jpg'
 
 function Header() {
     return (
-
-        <header id="masthead" className="site-header">
+        
+        <div id="page" class="hfeed site">
+        <header id="masthead" className="site-header" style="background: url(assets/img/slider-bg.jpg)">
             {/* <!-- header starting from here --> */}
 
             <div className="hgroup-wrap">
@@ -15,7 +16,7 @@ function Header() {
                         {/* <!-- site branding starting from here --> */}
                         <h1 className="site-title">
                             <a href="/" title="site-logo" target="_self">
-                                <img src={siteLogo} alt="site-logo" />
+                                <img src={siteLogo} alt="logo" />
                             </a>
                         </h1>
                         {/* <!-- <span className="site-description">satisfied home</span> --> */}
@@ -30,31 +31,30 @@ function Header() {
                                 <div className="menu-content-wrapper">
                                     <div className="menu-top-menu-container">
                                         <ul>
-                                            <li className="current-menu-item"><a href="/" target="_self">home</a>
-                                            </li>
+                                            <li><a href="/" target="_self">home</a></li>
                                             <li><a href="/aboutpage" target="_self">about us</a></li>
                                             <li><a href="/service" target="_self">service</a></li>
                                             <li><a href="/errorpage" target="_self">error</a></li>
-                                            <li className="menu-item-has-children"><a href="#" target="_self">pages</a>
+                                            <li className="menu-item-has-children"><a target="_self">pages</a>
                                                 <ul>
-                                                    <li><a href="#" target="_self">portfolio</a></li>
-                                                    <li><a href="#" target="_self">portfolio
+                                                    <li><a target="_self">portfolio</a></li>
+                                                    <li><a target="_self">portfolio
                                                             detail</a>
                                                     </li>
-                                                    <li><a href="#" target="_self">service detail</a>
+                                                    <li><a target="_self">service detail</a>
                                                     </li>
-                                                    <li><a href="#" target="_self">error page</a></li>
+                                                    <li><a target="_self">error page</a></li>
                                                     <li>
-                                                        <a href="#" target="_self">listing version</a>
+                                                        <a target="_self">listing version</a>
                                                         <ul>
                                                             <li>
-                                                                <a href="#" target="_self">listing 1</a>
+                                                                <a target="_self">listing 1</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" target="_self">listing 2</a>
+                                                                <a target="_self">listing 2</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#" target="_self">listing 3</a>
+                                                                <a target="_self">listing 3</a>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -110,22 +110,32 @@ function Header() {
                         {/* <!-- search section ends here --> */}
                     </div>
                 </div>
-                <div className="mouse-scroll">
-                    <a href="#content">scroll</a>
                 </div>
-            </div>
-            <section className="featured-slider ">
-                <div className="banner-slider">
-                    <div className="slider-item">
-                        <figure className="slider-image">
-                            <img src={sliderImg} alt="slider-img" />
-                        </figure>
+                <div class="page-title-wrap" style="background-image:url(assets/img/single-page.jpg);">
+                <div class="container">
+                    <h2 class="page-title">
+                        
+                    </h2>
+                    <div class="breadcrumb-trail breadcrumbs">
+                        <ul class="trail-items">
+                            <li class="trail-item trail-begin">
+                                <a href="#" rel="home">
+                                    <span itemprop="name">Home</span>
+                                </a>
+                                <meta />
+                            </li>
+                            <li class="trail-item trail-end">
+                                <span itemprop="name">about</span>
+                                <meta />
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </div>
 
 
         </header>
+        </div>
         // {/* <!-- header ends here --> */}
     )
 }
