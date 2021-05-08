@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
+import CountUp from 'react-countup'
 import headingImage from '../assets/img/heading-image.png'
 import videoImage from '../assets/img/video-image.jpg'
 import counterIcon1 from '../assets/img/counter-icon1.png'
@@ -228,7 +229,7 @@ function aboutpage() {
                                                         <img src={counterIcon1} alt="counter-icon1" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                        <span className="counter-value" data-count="640">0</span>
+                                                    <CountUp className="counter-value" end={640} />
                                                         <span className="counter-name">happy customer</span>
                                                     </div>
                                                 </div>
@@ -237,7 +238,7 @@ function aboutpage() {
                                                         <img src={counterIcon2} alt="counter-icon2" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                        <span className="counter-value" data-count="7">0</span>
+                                                    <CountUp className="counter-value" end={7} />
                                                         <span className="counter-name">our branches</span>
                                                     </div>
                                                 </div>
@@ -248,7 +249,7 @@ function aboutpage() {
                                                         <img src={counterIcon3} alt="counter-icon3" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                        <span className="counter-value" data-count="35">0</span>
+                                                    <CountUp className="counter-value" end={35} />
                                                         <span className="counter-name">office member</span>
                                                     </div>
                                                 </div>
@@ -257,7 +258,7 @@ function aboutpage() {
                                                         <img src={counterIcon4} alt="counter-icon4" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                        <span className="counter-value" data-count="335">0</span>
+                                                    <CountUp className="counter-value" end={335} />
                                                         <span className="counter-name">repeated customer</span>
                                                     </div>
                                                 </div>

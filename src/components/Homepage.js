@@ -42,7 +42,7 @@ import productsBg from '../assets/img/products-bg.jpg'
 
 function Homepage() {
 
-    var settings = {
+    const settings = {
         dots: true,
         infinite: true,
         autoplay: true,
