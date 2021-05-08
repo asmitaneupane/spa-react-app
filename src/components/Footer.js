@@ -1,13 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import siteLogo from '../assets/img/site-logo.png'
 import { Link } from 'react-router-dom'
 import '../App.css'
+import footerBg from '../assets/img/footer-bg.png'
 
 function Footer() {
+
+    const [isVisible, setIsVisible] = useState(false);
+     // Show button when page is scorlled upto given distance
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 300) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      };
+      // Set the top cordinate to 0
+  // make scrolling smooth
+    const scrollToTop = () =>{
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+     };
+
+     useEffect(() => {
+        window.addEventListener("scroll", toggleVisibility);
+      }, []);
+     
+
     return (
         <footer id="colophon" className="site-footer">
             {/* <!-- footer starting from here --> */}
-            <div className="widget-area" style={{ background: "url( assets/img/footer-bg.png)" }}>
+            <div className="widget-area" style={{
+                background: `url(${footerBg})`,
+            }} >
                 {/* <!-- widget area starting from here --> */}
                 <div className="container">
                     <aside className="widget">
@@ -53,7 +80,7 @@ function Footer() {
                         <form className="mc4wp-form">
                             <div className="mc4wp-form-fields">
                                 <p>
-                                    <input name="EMAIL" placeholder="exmaple@gmail.com" required="" type="email" />
+                                    <input name="EMAIL" placeholder="exmaple@gmail.com" type="email" required />
                                 </p>
                                 <p>
                                     <input value="SUBSCRIBE" type="submit" />
@@ -99,8 +126,13 @@ function Footer() {
                         </a>
                     </span>
                 </div>
+
                 <div className="back-to-top">
+                    {isVisible && 
+                    <div onClick={scrollToTop}>
                     <button href="#masthead" title="Go to Top" className="fa-angle-up"></button>
+                </div>
+                }
                 </div>
 
             </div>

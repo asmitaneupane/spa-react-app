@@ -8,9 +8,9 @@ import './assets/css/slick-theme.css'
 import './assets/css/meanmenu.css'
 import Footer from './components/Footer'
 import Homepage from './components/Homepage'
-import { 
-    BrowserRouter as Router,
-    Route 
+import {
+  BrowserRouter as Router,
+  Route
 } from "react-router-dom";
 import aboutpage from './components/aboutpage'
 import contact from './components/contact'
@@ -19,15 +19,15 @@ import service from './components/service'
 
 function App() {
   return (
-      <Router>
-        <div>
+    <Router>
+      <div>
         <Route exact path="/" component={Homepage} />
         <Route path="/aboutpage" component={aboutpage} />
         <Route path="/contact" component={contact} />
         <Route path="/service" component={service} />
         <Route path="/errorpage" component={errorpage} />
         <Footer></Footer></div>
-      </Router>
+    </Router>
   )
 }
 
