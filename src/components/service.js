@@ -42,7 +42,7 @@ function service() {
                                                 <ul>
                                                     <li><a href="/" target="_self">home</a></li>
                                                     <li><a href="/aboutpage" target="_self">about us</a></li>
-                                                    <li><a href="/service" target="_self">service</a></li>
+                                                    <li className="current-menu-item"><a href="/service" target="_self">service</a></li>
                                                     <li><a href="/errorpage" target="_self">error</a></li>
                                                     <li className="menu-item-has-children"><a target="_self">pages</a>
                                                         <ul>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Slider from 'react-slick'
 import headingImage from '../assets/img/heading-image.png'
 import videoImage from '../assets/img/video-image.jpg'
 import counterIcon1 from '../assets/img/counter-icon1.png'
@@ -20,6 +21,14 @@ import singlePage from '../assets/img/single-page.jpg'
 
 
 function aboutpage() {
+    var settings = {
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    };
     return (
         <>
 
@@ -262,7 +271,7 @@ function aboutpage() {
                                                 Vivamus nulla at in eros mi, magna malesuada ut sed
                                             facilisis, metus proin.</p>
                                             </header>
-                                            <div className="testimonial-slider">
+                                            <Slider className="testimonial-slider">
                                                 <div className="testimonial-item">
                                                     <div className="entry-content">
                                                         <p>“Tincidunt dis. Tortor dignissim, velit in et blandit interdum dui
@@ -324,7 +333,7 @@ function aboutpage() {
 
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Slider>
                                         </div>
                                     </div>
                                 </div>
@@ -622,7 +631,7 @@ function aboutpage() {
                                                 <span>partners </span>We Use Products of The best Brands Only</h2>
                                         </header>
 
-                                        <div className="partner-slider">
+                                        <Slider className="partner-slider" {...settings}>
                                             <div className="partner-item">
                                                 <a href="#">
                                                     <img src={partner1} alt="partner1" />
@@ -648,7 +657,7 @@ function aboutpage() {
                                                     <img src={partner3} alt="partner3" />
                                                 </a>
                                             </div>
-                                        </div>
+                                        </Slider>
                                     </div>
                                 </div>
                             </section>

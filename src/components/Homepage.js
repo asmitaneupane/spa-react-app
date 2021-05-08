@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import CountUp from 'react-countup'
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import about1 from '../assets/img/about1.jpg'
 import about2 from '../assets/img/about2.jpg'
 import headingImage from '../assets/img/heading-image.png'
