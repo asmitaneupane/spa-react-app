@@ -1,10 +1,24 @@
-import React from 'react'
+import React,{ useState } from 'react'
+import Modal from 'react-modal'
+import FormComponent from '../components/searchForm'
 import siteLogo from '../assets/img/site-logo.png'
 import singlePage from '../assets/img/single-page.jpg'
 import aboutBg2 from '../assets/img/about-bg2.png'
 
 
-function contact() {
+function Contact() {
+
+    //searchForm Modal
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const searchForm = () => {
+        setModalIsOpen(true)
+    }
+
+    const setModalIsOpenToFalse = () => {
+        setModalIsOpen(false)
+    }
+
     return (
         <>
 
@@ -72,8 +86,12 @@ function contact() {
                                 {/* <!-- navbar ends here --> */}
                                 <div id="left-search" className="header-search-section">
                                     <div className="search-toggle">
-                                        <i className="fa"></i>
+                                        <i className="fa" onClick={searchForm}></i>
                                     </div>
+                                    <Modal isOpen={modalIsOpen}>
+                                        <button onClick={setModalIsOpenToFalse}>x</button>
+                                        <FormComponent />
+                                    </Modal>
                                 </div>
                                 <div className="site-cart-views">
                                     <div className="site-cart-info">
@@ -91,25 +109,6 @@ function contact() {
                                     </div>
                                 </div>
 
-                                <div className="search-section">
-                                    {/* <!-- search section starting from here --> */}
-                                    <div className="search-container">
-                                        <div className="close-icon">
-                                            <i className="fa fa-times"></i>
-                                        </div>
-                                        <form role="search" method="get" className="search-form" action="">
-                                            <label>
-                                                <span className="screen-reader-text">Search for:</span>
-                                                <input className="search-field" placeholder="Search …" defaultValue="" name="s"
-                                                    type="search" />
-                                                <span className="search-input-line"></span>
-                                            </label>
-                                            <input className="search-submit" defaultValue="Search" type="submit" />
-                                        </form>
-                                        <h5>Type to search</h5>
-                                    </div>
-                                </div>
-                                {/* <!-- search section ends here --> */}
                             </div>
                         </div>
                     </div>
@@ -124,12 +123,12 @@ function contact() {
                                 <ul className="trail-items">
                                     <li className="trail-item trail-begin">
                                         <a href="#" rel="home">
-                                            <span itemprop="name">Home</span>
+                                            <span itemProp="name">Home</span>
                                         </a>
                                         <meta />
                                     </li>
                                     <li className="trail-item trail-end">
-                                        <span itemprop="name">Contact</span>
+                                        <span itemProp="name">Contact</span>
                                         <meta />
                                     </li>
                                 </ul>
@@ -164,16 +163,16 @@ function contact() {
                                                     <div className="screen-reader-response"></div>
                                                     <form className="wpcf7-form">
                                                         <div>
-                                                            <input name="_wpcf7" value="74" type="hidden" />
-                                                            <input name="_wpcf7_version" value="4.7" type="hidden" />
-                                                            <input name="_wpcf7_locale" value="en_US" type="hidden" />
-                                                            <input name="_wpcf7_unit_tag" value="wpcf7-f74-p10-o1" type="hidden" />
-                                                            <input name="_wpnonce" value="126daca5d8" type="hidden" />
+                                                            <input name="_wpcf7" defaultValue="74" type="hidden" />
+                                                            <input name="_wpcf7_version" defaultValue="4.7" type="hidden" />
+                                                            <input name="_wpcf7_locale" defaultValue="en_US" type="hidden" />
+                                                            <input name="_wpcf7_unit_tag" defaultValue="wpcf7-f74-p10-o1" type="hidden" />
+                                                            <input name="_wpnonce" defaultValue="126daca5d8" type="hidden" />
                                                         </div>
                                                         <p>
                                                             <label>
                                                                 <span className="your-name">
-                                                                    <input name="your-name" value="" size="40" className=""
+                                                                    <input name="your-name" defaultValue="" size="40" className=""
                                                                         placeholder="Full Name" type="text" />
                                                                 </span>
                                                             </label>
@@ -181,7 +180,7 @@ function contact() {
                                                         <p>
                                                             <label>
                                                                 <span className="your-email">
-                                                                    <input name="your-email" value="" size="40" className=""
+                                                                    <input name="your-email" defaultValue="" size="40" className=""
                                                                         placeholder="Email Address" type="email" />
                                                                 </span>
                                                             </label>
@@ -195,7 +194,7 @@ function contact() {
                                                             </label>
                                                         </p>
                                                         <p>
-                                                            <input value="submit" className="wpcf7-submit" type="submit" />
+                                                            <input defaultValue="submit" className="wpcf7-submit" type="submit" />
                                                             <span className="ajax-loader"></span>
                                                         </p>
                                                         <div className="wpcf7-response-output wpcf7-display-none"></div>
@@ -267,4 +266,4 @@ function contact() {
     )
 }
 
-export default contact
+export default Contact

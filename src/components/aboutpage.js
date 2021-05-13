@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick'
 import CountUp from 'react-countup'
+import Modal from 'react-modal'
+import FormComponent from '../components/searchForm'
 import headingImage from '../assets/img/heading-image.png'
 import videoImage from '../assets/img/video-image.jpg'
 import counterIcon1 from '../assets/img/counter-icon1.png'
@@ -21,7 +23,9 @@ import aboutBg from '../assets/img/about-bg.png'
 import singlePage from '../assets/img/single-page.jpg'
 
 
-function aboutpage() {
+function Aboutpage() {
+
+    //sticky slider with dots and arrow
     var settings = {
         dots: true,
         infinite: true,
@@ -30,6 +34,18 @@ function aboutpage() {
         slidesToShow: 4,
         slidesToScroll: 1
     };
+
+    //searchForm Modal
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const searchForm = () => {
+        setModalIsOpen(true)
+    }
+
+    const setModalIsOpenToFalse = () => {
+        setModalIsOpen(false)
+    }
+
     return (
         <>
 
@@ -97,8 +113,12 @@ function aboutpage() {
                                 {/* <!-- navbar ends here --> */}
                                 <div id="left-search" className="header-search-section">
                                     <div className="search-toggle">
-                                        <i className="fa"></i>
+                                        <i className="fa" onClick={searchForm}></i>
                                     </div>
+                                    <Modal isOpen={modalIsOpen}>
+                                        <button onClick={setModalIsOpenToFalse}>x</button>
+                                        <FormComponent />
+                                    </Modal>
                                 </div>
                                 <div className="site-cart-views">
                                     <div className="site-cart-info">
@@ -116,25 +136,6 @@ function aboutpage() {
                                     </div>
                                 </div>
 
-                                <div className="search-section">
-                                    {/* <!-- search section starting from here --> */}
-                                    <div className="search-container">
-                                        <div className="close-icon">
-                                            <i className="fa fa-times"></i>
-                                        </div>
-                                        <form role="search" method="get" className="search-form" action="">
-                                            <label>
-                                                <span className="screen-reader-text">Search for:</span>
-                                                <input className="search-field" placeholder="Search …" defaultValue="" name="s"
-                                                    type="search" />
-                                                <span className="search-input-line"></span>
-                                            </label>
-                                            <input className="search-submit" defaultValue="Search" type="submit" />
-                                        </form>
-                                        <h5>Type to search</h5>
-                                    </div>
-                                </div>
-                                {/* <!-- search section ends here --> */}
                             </div>
                         </div>
                     </div>
@@ -149,12 +150,12 @@ function aboutpage() {
                                 <ul className="trail-items">
                                     <li className="trail-item trail-begin">
                                         <a href="#" rel="home">
-                                            <span itemprop="name">Home</span>
+                                            <span itemProp="name">Home</span>
                                         </a>
                                         <meta />
                                     </li>
                                     <li className="trail-item trail-end">
-                                        <span itemprop="name">about</span>
+                                        <span itemProp="name">about</span>
                                         <meta />
                                     </li>
                                 </ul>
@@ -229,7 +230,7 @@ function aboutpage() {
                                                         <img src={counterIcon1} alt="counter-icon1" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                    <CountUp className="counter-value" end={640} />
+                                                        <CountUp className="counter-value" end={640} />
                                                         <span className="counter-name">happy customer</span>
                                                     </div>
                                                 </div>
@@ -238,7 +239,7 @@ function aboutpage() {
                                                         <img src={counterIcon2} alt="counter-icon2" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                    <CountUp className="counter-value" end={7} />
+                                                        <CountUp className="counter-value" end={7} />
                                                         <span className="counter-name">our branches</span>
                                                     </div>
                                                 </div>
@@ -249,7 +250,7 @@ function aboutpage() {
                                                         <img src={counterIcon3} alt="counter-icon3" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                    <CountUp className="counter-value" end={35} />
+                                                        <CountUp className="counter-value" end={35} />
                                                         <span className="counter-name">office member</span>
                                                     </div>
                                                 </div>
@@ -258,7 +259,7 @@ function aboutpage() {
                                                         <img src={counterIcon4} alt="counter-icon4" />
                                                     </figure>
                                                     <div className="count-detail">
-                                                    <CountUp className="counter-value" end={335} />
+                                                        <CountUp className="counter-value" end={335} />
                                                         <span className="counter-name">repeated customer</span>
                                                     </div>
                                                 </div>
@@ -670,4 +671,4 @@ function aboutpage() {
     )
 }
 
-export default aboutpage
+export default Aboutpage

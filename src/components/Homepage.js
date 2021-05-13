@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 import Slider from 'react-slick'
+import Modal from 'react-modal'
+import FormComponent from '../components/searchForm'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import about1 from '../assets/img/about1.jpg'
@@ -42,6 +44,7 @@ import productsBg from '../assets/img/products-bg.jpg'
 
 function Homepage() {
 
+    //sticky slider with dots and arrow
     const settings = {
         dots: true,
         infinite: true,
@@ -51,14 +54,67 @@ function Homepage() {
         slidesToScroll: 1
     };
 
+    // //responsive header
+    // const [click, setClick] = useState(false)
+    // const [button, setButton] = useState(true)
+
+    // const handleClick = () => setClick(!click);
+    // const closeMobileMenu = () => setClick(false);
+
+    // const showButton = () => {
+    //     if( window.innerWidth <= 960 ) {
+    //         setButton(false);
+    //     } else {
+    //         setButton(true);
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     showButton();
+    // },
+    // []);
+    // window.addEventListener('resize', showButton);
+
+    //sticky header after header image
+
+    // const [scrolled, setScrolled] = React.useState(false)
+    // const handleScroll = () => {
+    //     const offset = window.scrollY
+    //     if (offset > 350) {
+    //         setScrolled(true)
+    //     } else {
+    //         setScrolled(false)
+    //     }
+    // }
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll)
+    // })
+    // let navbarClasses = ['navbar'];
+    // if (scrolled) {
+    //     navbarClasses.push('scrolled')
+    // }
+
+    //searchForm Modal
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const searchForm = () => {
+        setModalIsOpen(true)
+    }
+
+    const setModalIsOpenToFalse = () => {
+        setModalIsOpen(false)
+    }
+
+
     return (
         <>
             <div className="home">
-                <div id="page" class="hfeed site">
+                <div id="page" className="hfeed site">
                     <header id="masthead" className="site-header">
                         {/* <!-- header starting from here --> */}
 
-                        <div className="hgroup-wrap">
+                        <div className="hgroup-wrap ">
                             <div className="container">
                                 <section className="site-branding">
                                     {/* <!-- site branding starting from here --> */}
@@ -75,18 +131,21 @@ function Homepage() {
                                 <div className="hgroup-right">
                                     <div id="navbar" className="navbar">
                                         {/* <!-- navbar starting from here --> */}
-                                        <nav id="site-navigation" className="navigation main-navigation">
+                                        <nav id="site-navigation" className="navigation main-navigation mean-navigation">
+                                        {/* <div className="menu-content-wrapper"  onClick={handleClick}> */}
                                             <div className="menu-content-wrapper">
-                                                <div className="menu-top-menu-container">
-                                                    <ul>
+                                            {/* <i className= {click ? 'fas fa-times' : 'fas fa-bars'} /> */}
+                                                <div className="menu-top-menu-container">   
+                                                <ul>                                                 
+                                                {/* <ul className={click ? 'nav-menu active': 'nav-menu'}> */}
                                                         <li className="current-menu-item">
+                                                        {/* <a href="/" target="_self" onClick={closeMobileMenu}>home</a> */}
                                                             <a href="/" target="_self">home</a>
                                                         </li>
                                                         <li><a href="/aboutpage" target="_self">about us</a></li>
                                                         <li><a href="/service" target="_self">service</a></li>
                                                         <li><a href="/errorpage" target="_self">error</a></li>
-                                                        <li className="menu-item-has-children"><a target="_self">pages</a>
-                                                            <ul>
+                                                        <li className="menu-item-has-children"><a target="_self" >pages</a>                                                            <ul>
                                                                 <li><a target="_self">portfolio</a></li>
                                                                 <li><a target="_self">portfolio
                                                             detail</a>
@@ -120,8 +179,16 @@ function Homepage() {
                                     {/* <!-- navbar ends here --> */}
                                     <div id="left-search" className="header-search-section">
                                         <div className="search-toggle">
-                                            <i className="fa"></i>
+                                            <i className="fa" onClick={searchForm}></i>
                                         </div>
+                                        <Modal isOpen={modalIsOpen}>
+                                            <button onClick={setModalIsOpenToFalse}>x</button>
+                                            <FormComponent />
+                                        </Modal>
+                                        <Modal isOpen={modalIsOpen}>
+                                            <button onClick={setModalIsOpenToFalse}>x</button>
+                                            <FormComponent />
+                                        </Modal>
                                     </div>
                                     <div className="site-cart-views">
                                         <div className="site-cart-info">
@@ -139,25 +206,7 @@ function Homepage() {
                                         </div>
                                     </div>
 
-                                    <div className="search-section">
-                                        {/* <!-- search section starting from here --> */}
-                                        <div className="search-container">
-                                            <div className="close-icon">
-                                                <i className="fa fa-times"></i>
-                                            </div>
-                                            <form role="search" method="get" className="search-form" action="">
-                                                <label>
-                                                    <span className="screen-reader-text">Search for:</span>
-                                                    <input className="search-field" placeholder="Search …" defaultValue="" name="s"
-                                                        type="search" />
-                                                    <span className="search-input-line"></span>
-                                                </label>
-                                                <input className="search-submit" defaultValue="Search" type="submit" />
-                                            </form>
-                                            <h5>Type to search</h5>
-                                        </div>
-                                    </div>
-                                    {/* <!-- search section ends here --> */}
+
                                 </div>
                             </div>
                             <div className="mouse-scroll">
@@ -176,10 +225,10 @@ function Homepage() {
                     </header>
                     {/* <!-- header ends here --> */}
 
-                    <div id="content" class="site-content">
-                        <div id="primary" class="content-area">
+                    <div id="content" className="site-content">
+                        <div id="primary" className="content-area">
                             {/* <!-- primary-home starting from here --> */}
-                            <main id="main" class="site-main">
+                            <main id="main" className="site-main">
                                 <section className="about-us-section" style={{
                                     background: `url(${aboutBg2})`,
                                 }} >
@@ -379,7 +428,7 @@ function Homepage() {
                                                     Vivamus nulla at in eros mi, magna malesuada ut sed
                                             facilisis, metus proin.</p>
                                                 </header>
-                                                <Slider className="testimonial-slider">
+                                                <Slider className="testimonial-slider" style= {{ autoplay:'true'}}>
 
                                                     <div className="testimonial-item">
                                                         <div className="entry-content">
@@ -791,7 +840,7 @@ function Homepage() {
                                         facilisis, metus proin.</p>
                                                 <a className="box-button">view all products</a>
                                             </header>
-                                            <Slider className="product-slider">
+                                            <Slider className="product-slider" style= {{ autoplay:'true'}}>
                                                 <div className="element-item">
                                                     <div className="product-list-wrapper">
                                                         <div className="image-icon-wrapper">

@@ -120,12 +120,12 @@ function Header() {
                             <ul className="trail-items">
                                 <li className="trail-item trail-begin">
                                     <a href="#" rel="home">
-                                        <span itemprop="name">Home</span>
+                                        <span itemProp="name">Home</span>
                                     </a>
                                     <meta />
                                 </li>
                                 <li className="trail-item trail-end">
-                                    <span itemprop="name">about</span>
+                                    <span itemProp="name">about</span>
                                     <meta />
                                 </li>
                             </ul>

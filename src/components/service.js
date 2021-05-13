@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from 'react-modal'
+import FormComponent from '../components/searchForm'
 import singlePost from '../assets/img/single-post.jpg'
 import headingImage from '../assets/img/heading-image.png'
 import pricingImage from '../assets/img/pricing-image.png'
@@ -11,7 +13,19 @@ import siteLogo from '../assets/img/site-logo.png'
 import singlePage from '../assets/img/single-page.jpg'
 import aboutBg from '../assets/img/about-bg.png'
 
-function service() {
+function Service() {
+
+    //searchForm Modal
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const searchForm = () => {
+        setModalIsOpen(true)
+    }
+
+    const setModalIsOpenToFalse = () => {
+        setModalIsOpen(false)
+    }
+
     return (
         <>
 
@@ -33,7 +47,7 @@ function service() {
                             {/* <!-- site branding ends here --> */}
 
 
-                            <div className="hgroup-right">
+                            <div className="hgroup-right sticky-header">
                                 <div id="navbar" className="navbar">
                                     {/* <!-- navbar starting from here --> */}
                                     <nav id="site-navigation" className="navigation main-navigation">
@@ -79,8 +93,12 @@ function service() {
                                 {/* <!-- navbar ends here --> */}
                                 <div id="left-search" className="header-search-section">
                                     <div className="search-toggle">
-                                        <i className="fa"></i>
+                                        <i className="fa" onClick={searchForm}></i>
                                     </div>
+                                    <Modal isOpen={modalIsOpen}>
+                                        <button onClick={setModalIsOpenToFalse}>x</button>
+                                        <FormComponent />
+                                    </Modal>
                                 </div>
                                 <div className="site-cart-views">
                                     <div className="site-cart-info">
@@ -98,25 +116,6 @@ function service() {
                                     </div>
                                 </div>
 
-                                <div className="search-section">
-                                    {/* <!-- search section starting from here --> */}
-                                    <div className="search-container">
-                                        <div className="close-icon">
-                                            <i className="fa fa-times"></i>
-                                        </div>
-                                        <form role="search" method="get" className="search-form" action="">
-                                            <label>
-                                                <span className="screen-reader-text">Search for:</span>
-                                                <input className="search-field" placeholder="Search …" defaultValue="" name="s"
-                                                    type="search" />
-                                                <span className="search-input-line"></span>
-                                            </label>
-                                            <input className="search-submit" defaultValue="Search" type="submit" />
-                                        </form>
-                                        <h5>Type to search</h5>
-                                    </div>
-                                </div>
-                                {/* <!-- search section ends here --> */}
                             </div>
                         </div>
                     </div>
@@ -131,17 +130,17 @@ function service() {
                                 <ul className="trail-items">
                                     <li className="trail-item trail-begin">
                                         <a href="#" rel="home">
-                                            <span itemprop="name">Home</span>
+                                            <span itemProp="name">Home</span>
                                         </a>
                                         <meta />
-                                    </li><li class="trail-item trail-begin">
+                                    </li><li className="trail-item trail-begin">
                                         <a href="#" rel="home">
-                                            <span itemprop="name">service</span>
+                                            <span itemProp="name">service</span>
                                         </a>
                                         <meta />
                                     </li>
                                     <li className="trail-item trail-end">
-                                        <span itemprop="name">hair salon</span>
+                                        <span itemProp="name">hair salon</span>
                                         <meta />
                                     </li>
                                 </ul>
@@ -433,4 +432,4 @@ function service() {
     )
 }
 
-export default service
+export default Service
