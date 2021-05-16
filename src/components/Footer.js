@@ -1,47 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import siteLogo from '../assets/img/site-logo.png'
-import { Link } from 'react-router-dom'
-import '../App.css'
-import footerBg from '../assets/img/footer-bg.png'
-
-function Footer() {
-
-    const [isVisible, setIsVisible] = useState(false);
-     // Show button when page is scorlled upto given distance
-    const toggleVisibility = () => {
-        if (window.pageYOffset > 300) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
-      };
-      // Set the top cordinate to 0
-  // make scrolling smooth
-    const scrollToTop = () =>{
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-     };
-
-     useEffect(() => {
-        window.addEventListener("scroll", toggleVisibility);
-      }, []);
-     
-
+import {Link} from 'react-router-dom';
+export default function Footer() {
     return (
-        <footer id="colophon" className="site-footer">
+        <div>
+            <footer id="colophon" className="site-footer">
             {/* <!-- footer starting from here --> */}
             <div className="widget-area" style={{
-                background: `url(${footerBg})`,
+                // background: `url(${footerBg})`,
             }} >
                 {/* <!-- widget area starting from here --> */}
                 <div className="container">
                     <aside className="widget">
                         <div className="textwidget">
-                            <a className="footer-branding">
+                            <Link className="footer-branding">
                                 <img src={siteLogo} />
-                            </a>
+                            </Link>
                         </div>
                     </aside>
                     <aside className="widget">
@@ -55,19 +29,19 @@ function Footer() {
                                     <li>
                                         <h4>call us</h4>
                                         <span>
-                                            <a href="mailto:info@gmail.com">info@gmail.com</a>
+                                            <Link to="mailto:info@gmail.com">info@gmail.com</Link>
                                         </span>
                                         <span>
-                                            <a href="mailto:support_spa@gmail.com">support_spa@gmail.com</a>
+                                            <Link to="mailto:support_spa@gmail.com">support_spa@gmail.com</Link>
                                         </span>
                                     </li>
                                     <li>
                                         <h4>email us</h4>
                                         <span>
-                                            <a href="tel:+1 484 473 2449">+1 484 473 2449</a>
+                                            <Link to="tel:+1 484 473 2449">+1 484 473 2449</Link>
                                         </span>
                                         <span>
-                                            <a href="tel:+1 484 473 2449">+1 484 473 2450</a>
+                                            <Link to="tel:+1 484 473 2449">+1 484 473 2450</Link>
                                         </span>
                                     </li>
 
@@ -121,24 +95,27 @@ function Footer() {
                         </ul>
                     </div>
                     <span className="copy-right">© 2018 &nbsp;
-                        <a >Theme Company</a> All Rights Reserved &nbsp;
-                        <a >Privacy Policy
-                        </a>
+                        <Link >Theme Company</Link> All Rights Reserved &nbsp;
+                        <Link >Privacy Policy
+                        </Link>
                     </span>
                 </div>
-
+{/* 
                 <div className="back-to-top">
                     {isVisible && 
                     <div onClick={scrollToTop}>
                     <button href="#masthead" title="Go to Top" className="fa-angle-up"></button>
                 </div>
                 }
-                </div>
+                </div> */}
 
             </div>
         </footer>
-        // {/* <!-- footer ends here --> */}
+         {/* <!-- footer ends here --> */}
+
+         <div class="back-to-top">
+            <button href="#masthead" title="Go to Top" class="fa-angle-up"></button>
+        </div>
+        </div>
     )
 }
-
-export default Footer
